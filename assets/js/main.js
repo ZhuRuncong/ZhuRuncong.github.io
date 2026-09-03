@@ -47,6 +47,32 @@
     });
   }
 
+  /* Every caret runs the same 1s blink, but a caret inside a statement that
+     was display:none only starts its timeline when the statement appears —
+     so it lands out of phase with the hero's, which began at load. Pinning
+     each one to the hero animation's startTime blinks them in step. */
+  function syncCarets(attempt) {
+    var carets = document.querySelectorAll('.caret');
+    if (carets.length < 2 || !carets[0].getAnimations) { return; }
+
+    var reference = carets[0].getAnimations()[0];
+    if (!reference) { return; }
+
+    /* startTime is null until the animation is ready; wait a frame for it. */
+    if (reference.startTime === null) {
+      if ((attempt || 0) < 5) {
+        requestAnimationFrame(function () { syncCarets((attempt || 0) + 1); });
+      }
+      return;
+    }
+
+    Array.prototype.slice.call(carets, 1).forEach(function (caret) {
+      caret.getAnimations().forEach(function (animation) {
+        animation.startTime = reference.startTime;
+      });
+    });
+  }
+
   /* ------------------------------------------------------- hero + terminal */
 
   function play() {
@@ -77,6 +103,7 @@
           .then(function () { return wait(idx === 0 ? 320 : 170); })
           .then(function () {
             line.statement.hidden = false;
+            requestAnimationFrame(function () { syncCarets(0); });
             if (!line.input) { return wait(120); }
             return type(line.input, line.text, 26);
           })

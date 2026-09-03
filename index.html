@@ -1,1 +1,251 @@
-"Hello World" 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Allen's Portfolio</title>
+<meta name="description" content="Allen Zhu — Computer Science graduate from Western University, building tools that turn data into insights. Toronto, ON.">
+<meta name="author" content="Allen Zhu">
+<meta name="theme-color" content="#f6f9fc">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23747fe0'/%3E%3Ctext x='16' y='23' font-family='Monaco,Consolas,monospace' font-size='20' fill='%23fff' text-anchor='middle'%3E&gt;%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/styles.css">
+<!-- Gates every JS-driven effect. Without it the page renders fully static. -->
+<script>document.documentElement.className += " js";</script>
+</head>
+
+<body>
+<!-- The slanted white sheet behind the hero. -->
+<div id="topBackground"></div>
+
+<header class="container-lg navbar-container">
+  <nav class="navbar" aria-label="Primary">
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="container-lg hero-container">
+    <h1 class="hero-title">Allen Zhu<span class="caret">&nbsp;</span></h1>
+
+    <div class="hero-description">
+      I am a Computer Science graduate from Western University.<br>
+      My passion is building tools that turn data into insights.<br>
+      Check out my <a href="#projects">side-projects</a> below.
+    </div>
+  </section>
+
+  <section class="container-lg about-container" aria-label="About">
+    <div class="terminal">
+      <div class="terminal-header" aria-hidden="true">
+        <div class="header-button red"></div>
+        <div class="header-button yellow"></div>
+        <div class="header-button green"></div>
+      </div>
+
+      <div class="terminal-window">
+        <div class="statement">
+          <div class="input-statement">Allen.location</div>
+          <div class="return-statement">"Toronto, ON, Canada"</div>
+        </div>
+
+        <div class="statement">
+          <div class="input-statement">Allen.contact</div>
+          <div class="return-statement">{"email": "<a href="mailto:allen.zhuruncong@gmail.com">allen.zhuruncong@gmail.com</a>", "phone": "<a href="tel:+16479968959">647-996-8959</a>"}</div>
+        </div>
+
+        <div class="statement">
+          <div class="input-statement">Allen.resume</div>
+          <div class="return-statement">"<span class="pending-link">allenzhu.pdf</span>"</div>
+        </div>
+
+        <div class="statement">
+          <div class="input-statement">Allen.education</div>
+          <div class="return-statement">"B.Sc. Computer Science - Western University"</div>
+        </div>
+
+        <div class="statement">
+          <div class="input-statement">Allen.interests</div>
+          <div class="return-statement">["Machine Learning", "Music", "British Parliamentary Debate", "Food", "League of Legends"]</div>
+        </div>
+
+        <div class="statement">
+          <div class="input-statement">Allen.languages</div>
+          <div class="return-statement">["Python", "SQL", "C++", "JavaScript"]</div>
+        </div>
+
+        <div class="statement">
+          <div class="input-statement"><span class="caret">&nbsp;</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-lg projects-container" id="projects">
+    <h2 class="section-title">Projects</h2>
+
+    <!-- DebaterSkill ------------------------------------------------------ -->
+    <article class="project-card reveal">
+      <img class="project-image" src="assets/img/graph_room.svg" alt="" style="object-position: 2% center" loading="lazy">
+      <div class="project-background" aria-hidden="true"></div>
+      <div class="project-content">
+        <h3>DebaterSkill</h3>
+        <p>A skill-rating engine for competitive British Parliamentary debate. It fits TrueSkill Through Time over tournament results, and powers the ratings behind BP Debate Directory.</p>
+        <div class="project-skills">
+          <span class="project-skill">Python</span>
+          <span class="project-skill">C++</span>
+          <span class="project-skill">pybind11</span>
+          <span class="project-skill">TrueSkill Through Time</span>
+          <span class="project-skill">Factor graphs</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/ZhuRuncong/debaterskill" target="_blank" rel="noopener noreferrer">
+            View Source
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M9.5 1h5.5v5.5h-1.6V3.73L7.2 10.03 6.06 8.89l6.3-6.3H9.5V1zM1.6 3.4h5.6V5H3.2v7.8H11V8.8h1.6v5.6H1.6V3.4z"/></svg>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- BP Debate Directory ----------------------------------------------- -->
+    <article class="project-card reveal">
+      <img class="project-image" src="assets/img/bpdd.png" alt="" style="object-position: left top" loading="lazy">
+      <div class="project-background" aria-hidden="true"></div>
+      <div class="project-content">
+        <h3>BP Debate Directory</h3>
+        <p>The first centralized directory for university-level British Parliamentary debate, aggregating results from 1,100+ tournaments to rank and track over 56,000 debaters worldwide.</p>
+        <div class="project-skills">
+          <span class="project-skill">Python</span>
+          <span class="project-skill">Go</span>
+          <span class="project-skill">JavaScript</span>
+          <span class="project-skill">PostgreSQL</span>
+          <span class="project-skill">Docker</span>
+          <span class="project-skill">MiniLM</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://debatedirectory.com/" target="_blank" rel="noopener noreferrer">
+            Visit Site
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M9.5 1h5.5v5.5h-1.6V3.73L7.2 10.03 6.06 8.89l6.3-6.3H9.5V1zM1.6 3.4h5.6V5H3.2v7.8H11V8.8h1.6v5.6H1.6V3.4z"/></svg>
+          </a>
+          <a class="project-link secondary" href="https://github.com/ZhuRuncong/BP-Debate-Directory" target="_blank" rel="noopener noreferrer">
+            View Source
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M9.5 1h5.5v5.5h-1.6V3.73L7.2 10.03 6.06 8.89l6.3-6.3H9.5V1zM1.6 3.4h5.6V5H3.2v7.8H11V8.8h1.6v5.6H1.6V3.4z"/></svg>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- WU Scout ----------------------------------------------------------- -->
+    <article class="project-card reveal">
+      <img class="project-image" src="assets/img/wuscout-draft-card.png" alt="" style="object-position: left center" loading="lazy">
+      <div class="project-background" aria-hidden="true"></div>
+      <div class="project-content">
+        <h3>Professional League of Legends Match Scouting Tool</h3>
+        <p>A scouting and match-review tool for professional coaching staff, built on Riot Esports API data with transformer-based win-likelihood analysis. Winthrop University Esports adopted it while I was an analyst there.</p>
+        <div class="project-skills">
+          <span class="project-skill">Python</span>
+          <span class="project-skill">TypeScript</span>
+          <span class="project-skill">React</span>
+          <span class="project-skill">FastAPI</span>
+          <span class="project-skill">PyTorch</span>
+          <span class="project-skill">PostgreSQL</span>
+          <span class="project-skill">Transformer models</span>
+        </div>
+        <div class="project-links">
+          <button type="button" class="project-link" data-shots='[
+            {"src":"assets/img/wuscout-matches.png","alt":"Opponent game history with champion priority by role"},
+            {"src":"assets/img/wuscout-draft.png","alt":"Draft view: compositions, full ban and pick order, fearless bans"},
+            {"src":"assets/img/wuscout-replay.png","alt":"Quick replay: timeline, minimap events, and win-likelihood forecasts"}
+          ]'>
+            View Screenshots
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 2.5h13v11h-13v-11zm1.5 1.5v8h10v-8H3zm1.2 6.3 2-2.4 1.5 1.8 2.1-2.9 2 3.5H4.2z"/></svg>
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Pig posture recognition -------------------------------------------- -->
+    <article class="project-card reveal">
+      <img class="project-image" src="assets/img/pig-postures.png" alt="" style="object-position: left center" loading="lazy">
+      <div class="project-background" aria-hidden="true"></div>
+      <div class="project-content">
+        <h3>Multi-View Pig Posture Recognition</h3>
+        <p>A Kaggle entry for a pig posture recognition competition, framed as viewpoint-level domain adaptation: a DINOv3 backbone aligned across camera views with Deep CORAL. Macro F1 0.768 on the leaderboard, ranked 66/253.</p>
+        <div class="project-skills">
+          <span class="project-skill">Python</span>
+          <span class="project-skill">PyTorch</span>
+          <span class="project-skill">DINOv3</span>
+          <span class="project-skill">Deep CORAL</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="assets/pdf/pig-posture-recognition.pdf" target="_blank" rel="noopener noreferrer">
+            Read Paper
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1h6l4 4v10H3V1zm1.5 1.5v11h7V6H8.5V2.5h-4zM10 3.06V4.5h1.44L10 3.06zM6 8h4v1.4H6V8zm0 2.6h4V12H6v-1.4z"/></svg>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Learning to Draft --------------------------------------------------- -->
+    <article class="project-card reveal">
+      <img class="project-image" src="assets/img/draft-order.png" alt="" style="object-position: left top" loading="lazy">
+      <div class="project-background" aria-hidden="true"></div>
+      <div class="project-content">
+        <h3>
+          Learning to Draft
+          <span class="project-subtitle">Evaluating Sequential vs. Permutation-Invariant Models for Predicting Professional League of Legends Drafts Under Rule Changes</span>
+        </h3>
+        <p>A course paper on next-action prediction in professional League of Legends drafting: is a draft an ordered sequence or an unordered set? Across 54,210 games, only the set model stayed partly robust under the 2025 Fearless format.</p>
+        <div class="project-skills">
+          <span class="project-skill">Python</span>
+          <span class="project-skill">PyTorch</span>
+          <span class="project-skill">Optuna</span>
+          <span class="project-skill">LSTM</span>
+          <span class="project-skill">Deep Sets</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="assets/pdf/learning-to-draft.pdf" target="_blank" rel="noopener noreferrer">
+            Read Paper
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1h6l4 4v10H3V1zm1.5 1.5v11h7V6H8.5V2.5h-4zM10 3.06V4.5h1.44L10 3.06zM6 8h4v1.4H6V8zm0 2.6h4V12H6v-1.4z"/></svg>
+          </a>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="container-lg" id="contact">
+    <h2 class="section-title">Contact me!</h2>
+    <div class="contact-links">
+      <span><a href="mailto:allen.zhuruncong@gmail.com">allen.zhuruncong@gmail.com</a></span>
+      <span><a href="tel:+16479968959">647-996-8959</a></span>
+      <span><a href="https://github.com/ZhuRuncong" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+    </div>
+  </section>
+</main>
+
+<footer class="container-lg footer">
+  <span>Made by Allen Zhu &copy; <span id="year">2026</span></span>
+</footer>
+
+<!-- Screenshot viewer for the closed-source project. -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshots" aria-hidden="true">
+  <button type="button" class="lightbox-btn lightbox-close" data-close aria-label="Close">&#10005;</button>
+  <div class="lightbox-inner">
+    <figure class="lightbox-figure">
+      <img src="" alt="">
+    </figure>
+    <div class="lightbox-bar">
+      <span class="lightbox-caption"></span>
+      <span class="lightbox-nav">
+        <button type="button" class="lightbox-btn" data-prev aria-label="Previous screenshot">&#8592;</button>
+        <span class="lightbox-btn lightbox-counter" aria-live="polite"></span>
+        <button type="button" class="lightbox-btn" data-next aria-label="Next screenshot">&#8594;</button>
+      </span>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
